@@ -20,7 +20,7 @@ MAX_TOKENS_PER_CHUNK = (
 def get_completion(
     prompt: str,
     system_message: str = "You are a helpful assistant.",
-    model: str = "gpt-4-turbo",
+    model: str = "gpt-4o",
     temperature: float = 0.3,
     json_mode: bool = False,
 ) -> Union[str, dict]:
@@ -261,7 +261,7 @@ def one_chunk_translate_text(
 
 
 def num_tokens_in_string(
-    input_str: str, encoding_name: str = "cl100k_base"
+    input_str: str, encoding_name: str = "o200k_base"
 ) -> int:
     """
     Calculate the number of tokens in a given string using a specified encoding.
@@ -664,7 +664,7 @@ def translate(
         ic(token_size)
 
         text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-            model_name="gpt-4",
+            model_name="gpt-4o",
             chunk_size=token_size,
             chunk_overlap=0,
         )
