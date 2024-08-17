@@ -261,7 +261,7 @@ def one_chunk_translate_text(
 
 
 def num_tokens_in_string(
-    input_str: str, encoding_name: str = "o200k_base"
+    input_str: str, encoding_name: str = "cl100k_base"
 ) -> int:
     """
     Calculate the number of tokens in a given string using a specified encoding.
