@@ -664,7 +664,7 @@ def translate(
         ic(token_size)
 
         text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-            model_name="gpt-4o",
+            model_name="gpt-4",
             chunk_size=token_size,
             chunk_overlap=0,
         )
